@@ -56,6 +56,7 @@ class Request extends \yii\web\Request
         $_GET = $this->_request->get ?: [];
         $_POST = $this->_request->post ?: [];
         $_COOKIE = $this->_request->cookie;
+        $_FILES = $this->_request->files?: [];
         foreach ($this->_request->server as $key => $value) {
             $_SERVER[strtoupper($key)] = $value;
         }
